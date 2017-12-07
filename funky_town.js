@@ -38,9 +38,18 @@ var buttonCallBack = function(e) {
   console.log(this);
 }
 
-var b = document.getElementById('b');
-b.addEventListener('click', buttonCallBack);
+/*
+THE FOLLOWING THREE PAIRS OF LINES ARE FOR USING BUTTONS IN ORDER TO MAKE PRINT CALLS INTO THE CONSOLE LOG
+*/
 
+var fib = document.getElementById('fib');
+fib.addEventListener('click', function(){console.log(fibonacci(25));});
+
+var gcd = document.getElementById('gcd');
+gcd.addEventListener('click', function(){console.log(gcd(10564, 24128));});
+
+var random = document.getElementById('random');
+random.addEventListener('click', function(){console.log(randomStudent());});
 /*
 OBJECTIVE TWO: A method that returns the greatest common denominator of two integers.
 
@@ -65,7 +74,7 @@ var gcd = function (a,b) {
 }
 
 // Feel free to add more names!!!
-var students = ["Samantha", "Eugene", "Yuyang", "Carol", "Tiffany", "Jen", "Leo", "And More"]
+var students = ["Samantha", "Eugene", "Yuyang", "Carol", "Tiffany", "Jen", "Leo"]
 var randomStudent = function() {
     // Picks a random number between 0 and the length of the list minus one...
     var s = Math.random() * (students.length-1);
