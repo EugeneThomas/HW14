@@ -29,6 +29,18 @@ var fibonacci = function(n) {
  }
 }
 
+// Right now there are errors...
+
+var buttonCallBack = function(e) {
+  console.log("Here is e!");
+  console.log(e);
+  console.log("Here is this!");
+  console.log(this);
+}
+
+var b = document.getElementById('b');
+b.addEventListener('click', buttonCallBack);
+
 /*
 OBJECTIVE TWO: A method that returns the greatest common denominator of two integers.
 
@@ -69,7 +81,7 @@ console.log(fibonacci(14)) // 377
 console.log(gcd(3, 7)) // 1
 console.log(gcd(120, 180)) // 60
 console.log(gcd(36592, 71042)) // 2
-// The following console prints are subject to change because they are random: 
+// The following console prints are subject to change because they are random:
 console.log(randomStudent())
 console.log(randomStudent())
 console.log(randomStudent())
